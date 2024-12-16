@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_experiment/data/cart_items.dart';
 import 'package:flutter_bloc_experiment/features/cart/bloc/cart_bloc.dart';
 import 'package:flutter_bloc_experiment/features/home/bloc/home_bloc.dart';
 import 'package:flutter_bloc_experiment/features/home/models/home_products_data_model.dart';
@@ -43,8 +44,10 @@ class CartTileWidget extends StatelessWidget {
                       onPressed: () {
                         // cartBloc.add(HomeProductCartButtonClickedEvent(
                         //     clickedProduct: productsDataModel));
+                        cartBloc.add(CartRemoveFromCartEvent(
+                            productDataModel: productsDataModel));
                       },
-                      icon: Icon(Icons.shopping_bag_outlined)),
+                      icon: Icon(Icons.shopping_bag)),
                 ],
               )
             ],

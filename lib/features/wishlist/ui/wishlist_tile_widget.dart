@@ -39,7 +39,7 @@ class WishlistTileWidget extends StatelessWidget {
                         // cartBloc.add(HomeProductWishlistButtonClickedEvent(
                         //     clickedProduct: productsDataModel));
                       },
-                      icon: Icon(Icons.favorite_border)),
+                      icon: Icon(Icons.favorite)),
                   IconButton(
                       onPressed: () {
                         // cartBloc.add(HomeProductCartButtonClickedEvent(
